@@ -34,7 +34,6 @@ const findSimilarity = (s1, word) => {
   return s1.split(/ /).filter(w => reg.test(w)).join(' ');
 }
 
-
 console.log(findSimilarity("bag dog dig dot doog dogs","dog"));
 console.log(findSimilarity("bag dog dig dot doog dogs","dot"));
 
@@ -47,8 +46,3 @@ console.log(regex.test(910000));
 console.log(regex.test(-910000));
 console.log(regex.test(-9000000));
 console.log(regex.test(-90005));
-
-
-////THE LIST OF TRAINING
-// https://www.codewars.com/kata/5722b3f0bd5583cf44001000/train/javascript  #40-42 left
-
