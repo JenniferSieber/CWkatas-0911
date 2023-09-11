@@ -15,32 +15,12 @@ const rndCode = () => {
   const p3 = '~!@#$%^&*';
   return [p1,p1,p2,p2,p2,p2,p3,p3].map((el) => el[~~(Math.random() * el.length)]).join('');
 }
-// const rndCode = () => {
-//   let code = [];
-//   const chars = ['A','B','C','D','E','F','G','H','I','J','K','L','M'];
-//   const nums = [0,1,2,3,4,5,6,7,8,9]
-//   const symbols = ['~','!','@','#','$','%','^','&','*']; 
-  
-//   for (let i = 0; i < 9; i++) {
-//     if (i == 0 || i == 1) {
-//       code.push(chars[Math.floor(chars.length * Math.random())])
-//     } 
-//     else if (i > 2 && i < 7) {
-//       code.push(nums[Math.floor(nums.length * Math.random())])
-//     }
-//     else if (i > 6) {
-//       code.push(symbols[Math.floor(symbols.length * Math.random())])
-//     }
-//   }
-//     return code.join('');
-// }
 
  console.log(rndCode());
 
 // KATA 3 7kyu #37
 // https://www.codewars.com/kata/5735e39313c205fe39001173
 const countAnimals = (str, arr) => arr.map(animal => (str.match(new RegExp(animal, 'g')) || []).length);
-
 
 console.log(countAnimals("dog,cat", ["dog","cat"])); 
 console.log(countAnimals("dog,cat", ["dog","cat","pig"])); 
